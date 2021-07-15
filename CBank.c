@@ -127,34 +127,33 @@ void database(int x){
 	FILE *fptr;
 	switch(x){
 		case 1: 
-					fptr = fopen("DATABASE.txt", "r");
-					fscanf(fptr, " %f\n", &current_date);
-					for(int i = 0; i < X; i++){
-						fscanf(fptr, " %d", &buffer[i].num);
-						if(buffer[i].num != 0){
-							fscanf(fptr, " %s %s %f", buffer[i].username, buffer[i].password, &buffer[i].balance);
-							fscanf(fptr, " %f %f %f %f %f", &logs[i][0], &logs[i][1], &logs[i][2], &logs[i][3], &logs[i][4]);
-						}
-						else{
-							buffer[i] = clean;
-						}
-					}
-					fclose(fptr);
-					break;
+			fptr = fopen("DATABASE.txt", "r");
+			fscanf(fptr, " %f\n", &current_date);
+			for(int i = 0; i < X; i++){
+				fscanf(fptr, " %d", &buffer[i].num);
+				if(buffer[i].num != 0){
+					fscanf(fptr, " %s %s %f", buffer[i].username, buffer[i].password, &buffer[i].balance);
+					fscanf(fptr, " %f %f %f %f %f", &logs[i][0], &logs[i][1], &logs[i][2], &logs[i][3], &logs[i][4]);
+				}
+				else{
+					buffer[i] = clean;
+				}
+			}
+			break;
 		case 2: 
-					fptr = fopen("DATABASE.txt", "w");
-					fprintf(fptr, " %.0f\n", current_date);
-					for(int i = 0; i < X; i++){
-						if(buffer[i].num == 0 || buffer[i].num == NULL){
-							fprintf(fptr, "0\n");
-						}
-						else{
-							fprintf(fptr, "%d %s %s %.2f %.0f %.0f %.2f %.0f %.2f\n", buffer[i].num, buffer[i].username, buffer[i].password, buffer[i].balance, logs[i][0], logs[i][1], logs[i][2], logs[i][3], logs[i][4]);
-						}
-					}
-					fclose(fptr);
-					break;
+			fptr = fopen("DATABASE.txt", "w");
+			fprintf(fptr, " %.0f\n", current_date);
+			for(int i = 0; i < X; i++){
+				if(buffer[i].num == 0 || buffer[i].num == NULL){
+					fprintf(fptr, "0\n");
+				}
+				else{
+					fprintf(fptr, "%d %s %s %.2f %.0f %.0f %.2f %.0f %.2f\n", buffer[i].num, buffer[i].username, buffer[i].password, buffer[i].balance, logs[i][0], logs[i][1], logs[i][2], logs[i][3], logs[i][4]);
+				}
+			}
+			break;
 	}
+        fclose(fptr);
 }
 
 //Encrypts the letters of the x by first letter b :: a
@@ -296,44 +295,45 @@ int check(int x){
 	int i;
 	switch(x){
 		case 1: 
-					for(i = 0; i < X; i++){
-						if(strcmp(buffer[i].username, temp.username) == 0){
-							return 1;
-							break;
-						}
-					}
+			for(i = 0; i < X; i++){
+				if(strcmp(buffer[i].username, temp.username) == 0){
+					return 1;
+					break;
+				}
+			}
+			return 0;
+			break;
+		case 2:
+			for(i = 0; i < X; i++){
+				if(buffer[i].username[0] == '\0'){
+					temp.balance = 10;
+					counter = i;
+					logs[counter][0] += 1;
+					temp.num = 10000+i+1;
+					buffer[i] = temp;
 					return 0;
 					break;
-		case 2:
-					for(i = 0; i < X; i++){
-						if(buffer[i].username[0] == '\0'){
-							temp.balance = 10;
-							counter = i;
-							logs[counter][0] += 1;
-							temp.num = 10000+i+1;
-							buffer[i] = temp;
-							return 0;
-							break;
-						}
-					}
-					display(5);
-					take(4);
-					hold = clean;
-					counter = 0;
-					system("cls");
-					main(1);
-					break;
+				}
+			}
+			display(5);
+			take(4);
+			hold = clean;
+			counter = 0;
+			system("cls");
+			main(1);
+			break;
 		case 3:
-					for(i = 0; i < X; i++){
-						if(strcmp(buffer[i].username, temp.username) == 0 && 										strcmp(buffer[i].password, temp.password) == 0){
-							counter = i;
-							logs[counter][0] += 1;
-							temp = buffer[i];
-							return 0; 
-							break;
-						}
-					}
-					return 1; break;
+			for(i = 0; i < X; i++){
+				if(strcmp(buffer[i].username, temp.username) == 0 && 										strcmp(buffer[i].password, temp.password) == 0){
+					counter = i;
+					logs[counter][0] += 1;
+					temp = buffer[i];
+					return 0; 
+					break;
+				}
+			}
+			return 1; 
+                        break;
 		default: return 1;
 	}
 	return 1;
@@ -586,79 +586,79 @@ void loan(){
 	scanf(" %c", &select);
 	switch(select){
 		case '1': 
-						tmp_loan = 500000;
-						break;
+				tmp_loan = 500000;
+				break;
 		case '2': 
-						tmp_loan = 400000;
-						break;
+				tmp_loan = 400000;
+				break;
 		case '3': 
-						tmp_loan = 300000;
-						break;
+				tmp_loan = 300000;
+				break;
 		case '4': 
-						tmp_loan = 200000;
-						break;
+				tmp_loan = 200000;
+				break;
 		case '5': 
-						tmp_loan = 100000;
-						break;
+				tmp_loan = 100000;
+				break;
 		case '6': 
-						if(logs[counter][1] == 0){
+				if(logs[counter][1] == 0){
+					system("cls");
+					printf("No Current Loan!\n");
+					loan(1);
+					exit(0);
+				}
+				printf("\n\n\tEnter Amount: ");
+				scanf(" %f", &tmp_loan);
+				display(11);
+				if (take(4) == 1){
+					tmp_loan = 0;
+					system("cls");
+					printf("Paying Loan Voided!\n");
+					loan();
+					exit(1);
+				}
+				else {
+					if(hold.balance >= tmp_loan){
+						if(tmp_loan > total){
 							system("cls");
-							printf("No Current Loan!\n");
-							loan(1);
-							exit(0);
-						}
-						printf("\n\n\tEnter Amount: ");
-						scanf(" %f", &tmp_loan);
-						display(11);
-						if (take(4) == 1){
-							tmp_loan = 0;
-							system("cls");
-							printf("Paying Loan Voided!\n");
+							printf("Amount Exceed Current Loan!\n");
 							loan();
 							exit(1);
 						}
-						else {
-							if(hold.balance >= tmp_loan){
-								if(tmp_loan > total){
-									system("cls");
-									printf("Amount Exceed Current Loan!\n");
-									loan();
-									exit(1);
-								}
-								hold.balance -= tmp_loan;
-								payed += tmp_loan;
-								logs[counter][2] = total;
-								logs[counter][1] = current_date;
-								logs[counter][2] -= tmp_loan;
-								if(logs[counter][2] == 0){
-									logs[counter][1] = 0;
-								}
-								system("cls");
-								printf("Payment Granted!\n");
-								loan();
-								exit(1);
-							}
-							else {
-								tmp_loan = 0;
-								system("cls");
-								printf("Amount Exceed Account Balance!\n");
-								loan();
-								exit(1);
-							}
+						hold.balance -= tmp_loan;
+						payed += tmp_loan;
+						logs[counter][2] = total;
+						logs[counter][1] = current_date;
+						logs[counter][2] -= tmp_loan;
+						if(logs[counter][2] == 0){
+							logs[counter][1] = 0;
 						}
-						exit(1);
-						break;
-		case '0':
 						system("cls");
-						main(2);
-						exit(1);
-						break;
-		default:
-						system("cls");
-						display(1);
+						printf("Payment Granted!\n");
 						loan();
 						exit(1);
-						break;
+					}
+					else {
+						tmp_loan = 0;
+						system("cls");
+						printf("Amount Exceed Account Balance!\n");
+						loan();
+						exit(1);
+					}
+				}
+				exit(1);
+				break;
+		case '0':
+				system("cls");
+				main(2);
+				exit(1);
+				break;
+		default:
+				system("cls");
+				display(1);
+				loan();
+				exit(1);
+				break;
 	}
 	printf("\n\n\tAmount Loaned P%.2f", tmp_loan);
 	printf("\n\n\tThank you for choosing CBank!");
