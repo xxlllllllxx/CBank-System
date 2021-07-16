@@ -1,0 +1,166 @@
+
+ ____________________________________________
+|                                                                               |
+|       ccc     cccc         c         c       c     c    c         |
+|     c           c     c      c  c       c c    c     c  c           |
+|     c           ccc        c    c      c   c  c     cc             |
+|     c           c      c   ccccc     c    c c     c   c          |
+|       ccc     cccc    c        c    c       c     c      c       |
+|                                                                               |
+|                                                                               |
+|                           __RECEIPT__                              |
+
+   Date: 2021
+
+
+        Account Number: [ #10001 ]
+
+        Username: [ Masallo___ ]
+
+        Balance: [ P4000.00 ]
+
+
+                        -Withdraw----- P1000.00
+
+                        -Deposit---- P0.00
+
+                        -Sent---------- P0.00
+
+                        -Loan--------- P0.00
+
+                        -Invest------- P0.00
+
+
+
+   Total Account Balance: P4000.00
+|                                                                               |
+|                                                                               |
+|            Thank you for using our CBank!              |
+|                                                                               |
+|                                                                               |
+ ____________________________________________
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ ____________________________________________
+|                                                                               |
+|       ccc     cccc         c         c       c     c    c         |
+|     c           c     c      c  c       c c    c     c  c           |
+|     c           ccc        c    c      c   c  c     cc             |
+|     c           c      c   ccccc     c    c c     c   c          |
+|       ccc     cccc    c        c    c       c     c      c       |
+|                                                                               |
+|                                                                               |
+|                           __RECEIPT__                              |
+
+   Date: 2021
+
+
+        Account Number: [ #10000 ]
+
+        Username: [ Anonymous1 ]
+
+        Balance: [ P0.00 ]
+
+
+                        -Withdraw----- P0.00
+
+                        -Deposit---- P0.00
+
+                        -Sent---------- P0.00
+
+   Total Account Balance: P0.00
+|                                                                               |
+|                                                                               |
+|            Thank you for using our CBank!              |
+|                                                                               |
+|                                                                               |
+ ____________________________________________
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ ____________________________________________
+|                                                                               |
+|       ccc     cccc         c         c       c     c    c         |
+|     c           c     c      c  c       c c    c     c  c           |
+|     c           ccc        c    c      c   c  c     cc             |
+|     c           c      c   ccccc     c    c c     c   c          |
+|       ccc     cccc    c        c    c       c     c      c       |
+|                                                                               |
+|                                                                               |
+|                           __RECEIPT__                              |
+
+   Date: 2021
+
+
+        Account Number: [ #10001 ]
+
+        Username: [ Masallo___ ]
+
+        Balance: [ P5000.00 ]
+
+
+                        -Withdraw----- P0.00
+
+                        -Deposit---- P0.00
+
+                        -Sent---------- P0.00
+
+                        -Loan--------- P0.00
+
+                        -Invest------- P0.00
+
+
+   Total Account Balance: P5000.00
+|                                                                               |
+|                                                                               |
+|            Thank you for using our CBank!              |
+|                                                                               |
+|                                                                               |
+ ____________________________________________
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ ____________________________________________
+|                                                                               |
+|       ccc     cccc         c         c       c     c    c         |
+|     c           c     c      c  c       c c    c     c  c           |
+|     c           ccc        c    c      c   c  c     cc             |
+|     c           c      c   ccccc     c    c c     c   c          |
+|       ccc     cccc    c        c    c       c     c      c       |
+|                                                                               |
+|                                                                               |
+|                           __RECEIPT__                              |
+
+   Date: 2021
+
+
+        Account Number: [ #10001 ]
+
+        Username: [ Masallo___ ]
+
+        Balance: [ P4000.00 ]
+
+
+                        -Withdraw----- P1000.00
+
+                        -Deposit---- P1000.00
+
+                        -Sent---------- P1000.00
+
+                        -Loan--------- P200000.00
+
+                        -Invest------- P50000.00
+
+
+   Loan from CBank: ( 2021 ) P50000.00
+
+
+   Invested to CBank: ( 2021 ) P50000.00
+
+
+   Loan Payed: ( 2021 ) P50000.00
+
+
+   Total Account Balance: P54000.00
+|                                                                               |
+|                                                                               |
+|            Thank you for using our CBank!              |
+|                                                                               |
+|                                                                               |
+ ____________________________________________
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
