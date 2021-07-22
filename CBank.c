@@ -399,13 +399,13 @@ void create(){
 
 //Handles Anonymous Login
 void noAcc(){
-	strcpy(temp.username, "Anonymous1");
-	strcpy(temp.password, "Anonymous1");
-	temp.balance = 0;
-	counter = 10;
-	temp.num = 10000;
-	hold = temp;
-	temp = clean;
+	strcpy(buffer[0].username, "Anonymous1");
+	strcpy(buffer[0].password, "Anonymous1");
+	buffer[0].num = 10000;
+	buffer[0].balance = 0;
+	counter = 0;
+	hold = buffer[0];
+	counter = 0;
 }
 
 //Handles Secondpage user profile
@@ -508,7 +508,7 @@ void withdraw(){
 		temp = clean;
 		system("cls");
 		printf("Amount Exceed your own Balance!\n");
-		withdraw();
+		withdraw(); 
 		exit(1);
 	}
 	else{
@@ -591,7 +591,7 @@ void send(){
 				exit(1);
 			}
 			else{
-				printf("\n\n\tYour current balance is %.2f - %.2f = %.2f",hold.balance, temp.balance, hold.balance - temp.balance);
+				printf("\n\n\tYour current balance is %.2f",hold.balance);
 				display(11);
 				if(take(4) == 1){
 					temp = clean;
@@ -851,16 +851,16 @@ void receipt(){
 	database(2);
 	dtb = 1;
 	FILE *fptr = fopen("Receipt.txt", "a");
-	fprintf(fptr, "\n ______________________________________________________________________________1_");
+	fprintf(fptr, "\n ____________________________________________");
 	fprintf(fptr, "\n|                                                                               |");
-	fprintf(fptr, "\n|           cccc     ccccc         c       c      c    c    c                   |");
-	fprintf(fptr, "\n|         c          c    c       c c      c c    c    c  c                     |");
-	fprintf(fptr, "\n|         c          ccccc       c   c     c   c  c    cc                       |");
-	fprintf(fptr, "\n|         c          c     c    ccccccc    c    c c    c   c                    |");
-	fprintf(fptr, "\n|           cccc     ccccc     c       c   c      c    c      c                 |");
+	fprintf(fptr, "\n|       ccc     cccc         c         c       c     c    c         |");
+	fprintf(fptr, "\n|     c           c     c      c  c       c c    c     c  c           |");
+	fprintf(fptr, "\n|     c           ccc        c    c      c   c  c     cc             |");
+	fprintf(fptr, "\n|     c           c      c   ccccc     c    c c     c   c          |");
+	fprintf(fptr, "\n|       ccc     cccc    c        c    c       c     c      c       |");
 	fprintf(fptr, "\n|                                                                               |");
 	fprintf(fptr, "\n|                                                                               |");
-	fprintf(fptr, "\n|                           __RECEIPT__                                         |");
+	fprintf(fptr, "\n|                           __RECEIPT__                              |");
 	fprintf(fptr, "\n\n   Date: %.0f\n", current_date);
 	fprintf(fptr, "\n\n        Account Number: [ #%d ]", hold.num);
 	fprintf(fptr, "\n\n        Username: [ %s ]", hold.username);
@@ -887,11 +887,11 @@ void receipt(){
 	fprintf(fptr, "\n\n\n   Total Account Balance: P%.2f", hold.balance+((logs[counter][4] * (0.025 * (current_date - logs[counter][3])))+logs[counter][4]));
 	fprintf(fptr, "\n|                                                                               |");
 	fprintf(fptr, "\n|                                                                               |");
-	fprintf(fptr, "\n|                        Thank you for using our CBank!                         |");
+	fprintf(fptr, "\n|            Thank you for using our CBank!              |");
 	fprintf(fptr, "\n|                                                                               |");
 	fprintf(fptr, "\n|                                                                               |");
-	fprintf(fptr, "\n _______________________________________________________________________________");
-	fprintf(fptr, "\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ");
+	fprintf(fptr, "\n ____________________________________________");
+	fprintf(fptr, "\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _");
 	withdrawn = 0;
 	deposited = 0;
 	sent = 0;
