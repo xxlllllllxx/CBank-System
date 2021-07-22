@@ -508,7 +508,7 @@ void withdraw(){
 		temp = clean;
 		system("cls");
 		printf("Amount Exceed your own Balance!\n");
-		send();
+		withdraw();
 		exit(1);
 	}
 	else{
@@ -518,7 +518,7 @@ void withdraw(){
 		bank_balance -= temp.balance;
 		temp = clean;
 		system("cls");
-		send();
+		withdraw();
 		exit(1);
 	}
 	}
@@ -552,7 +552,7 @@ void deposit(){
 		bank_balance += temp.balance;
 		temp = clean;
 		system("cls");
-		send();
+		deposit();
 		exit(1);
 	}
 	else if(ch == '0'){
@@ -591,7 +591,7 @@ void send(){
 				exit(1);
 			}
 			else{
-				printf("\n\n\tYour current balance is %.2f",hold.balance);
+				printf("\n\n\tYour current balance is %.2f - %.2f = %.2f",hold.balance, temp.balance, hold.balance - temp.balance);
 				display(11);
 				if(take(4) == 1){
 					temp = clean;
